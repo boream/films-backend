@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=pro&& node index.js",
-    "dev": "set NODE_ENV=dev&& nodemon index.js"
+    "dev": "NODE_PATH=. set NODE_ENV=dev&& nodemon index.js | bunyan"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,9 @@
   "dependencies": {
     "bunyan": "^1.8.12",
     "koa": "^2.9.0",
-    "koa-logger": "^3.2.1"
+    "koa-body": "^2.6.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^8.0.0-alpha.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.0"
